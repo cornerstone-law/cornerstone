@@ -5,12 +5,23 @@
     <title>CStone Law</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%; /* Ensure the body fills the full viewport */
             margin: 0;
             font-family: 'Open Sans', Arial, sans-serif;
             color: #1E1E2F;
             text-align: center;
             line-height: 1.6;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #1E1E2F;
@@ -25,7 +36,6 @@
             font-size: 28px;
             font-weight: bold;
             margin: 0;
-            
         }
         header img {
             height: 50px; /* Adjust size as needed */
@@ -35,7 +45,12 @@
         .hero {
             background: linear-gradient(90deg, #5C677D 0%, #A3A9B3 100%);
             color: #fff;
-            padding: 100px 20px;
+            padding: 50px 20px;
+            flex-grow: 1; /* Make the hero section fill remaining vertical space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .hero h1 {
             font-size: 55px; /* Increased font size for prominence */
@@ -48,8 +63,6 @@
             font-size: 22px; /* Slightly larger for better balance with the title */
             margin-bottom: 30px;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
         .hero .cta {
             display: inline-block;
